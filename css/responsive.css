@@ -1,0 +1,80 @@
+/* ===========================================
+   Responsive Styles - レスポンシブ対応
+   =========================================== */
+
+/* タブレット */
+@media (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+
+    .infobox {
+        width: 100%;
+        float: none;
+        margin: var(--spacing-md) 0;
+    }
+
+    .related-links ul {
+        column-count: 2;
+    }
+}
+
+/* モバイル */
+@media (max-width: 768px) {
+    .wiki-header {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    .header-center {
+        order: 3;
+        max-width: 100%;
+        margin: var(--spacing-sm) 0 0;
+        flex: 1 1 100%;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .related-links ul {
+        column-count: 1;
+    }
+
+    .wikitable {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .toc {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+/* 印刷用スタイル */
+@media print {
+
+    .wiki-header,
+    .sidebar,
+    .article-tabs,
+    .section-edit,
+    .toc-toggle,
+    .wiki-footer {
+        display: none;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .infobox {
+        float: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワィキペディア - フリー百科事典</title>
+
+    <!-- CSS - パーツごとに分割 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ヘッダー（パーツから読み込み） -->
+    <div id="header-placeholder"></div>
+
+    <!-- メインコンテナ -->
+    <div class="wiki-container">
+        <!-- サイドバー（パーツから読み込み） -->
+        <div id="sidebar-placeholder"></div>
+
+        <!-- メインコンテンツ -->
+        <main class="content">
+            <!-- 記事タブ（パーツから読み込み） -->
+            <div id="article-tabs-placeholder"></div>
+
+            <!-- 記事本文（JSで動的に生成される） -->
+            <article class="article" id="article-content">
+                <div class="notice-box info">
+                    <p>記事を読み込み中...</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- フッター（パーツから読み込み） -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+    <script src="js/parts-loader.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // ページ読み込み時に共通パーツをロード
+        document.addEventListener('DOMContentLoaded', async () => {
+            // 共通パーツを読み込み
+            await PartsLoader.loadStandardLayout();
+
+            // 記事を読み込み
+            const renderer = new WikiArticleRenderer();
+            const articleName = getArticleFromUrl();
+            renderer.loadArticle(`articles/${articleName}.json`);
+        });
+    </script>
+</body>
+
+</html>

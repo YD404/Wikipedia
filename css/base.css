@@ -1,0 +1,87 @@
+/* ===========================================
+   Base Styles - リセット、変数、基本スタイル
+   =========================================== */
+
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS変数 */
+:root {
+    /* カラーパレット */
+    --wiki-blue: #3366cc;
+    --wiki-blue-hover: #447ff5;
+    --wiki-blue-visited: #0b0080;
+    --wiki-red: #ba0000;
+    --wiki-external: #36b;
+
+    /* ボーダー */
+    --wiki-border: #a2a9b1;
+    --wiki-border-light: #c8ccd1;
+
+    /* 背景色 */
+    --wiki-bg-light: #f8f9fa;
+    --wiki-bg-infobox: #f8f9fa;
+    --wiki-bg-header: #eaecf0;
+    --wiki-header-bg: #ffffff;
+    --wiki-sidebar-bg: #f8f9fa;
+
+    /* テキスト */
+    --wiki-text: #202122;
+    --wiki-text-muted: #54595d;
+
+    /* フォント */
+    --font-content: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: 'Linux Libertine', Georgia, Times, serif;
+
+    /* スペーシング */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* レイアウト */
+    --sidebar-width: 220px;
+    --max-width: 1600px;
+}
+
+/* 基本スタイル */
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: var(--font-content);
+    color: var(--wiki-text);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* リンク */
+a {
+    color: var(--wiki-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--wiki-blue-visited);
+}
+
+/* 外部リンクアイコン */
+a.external::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 3px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%233366cc' d='M6 1h5v5L8.75 3.75 4.5 8 4 7.5l4.25-4.25L6 1z'/%3E%3Cpath fill='%233366cc' d='M2 3h2v1H2v6h6V8h1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z'/%3E%3C/svg%3E") no-repeat center;
+}

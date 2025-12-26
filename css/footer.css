@@ -1,0 +1,43 @@
+/* ===========================================
+   Footer Styles - フッター
+   =========================================== */
+
+.wiki-footer {
+    background: var(--wiki-bg-light);
+    border-top: 1px solid var(--wiki-border);
+    padding: var(--spacing-md) var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: var(--spacing-sm) var(--spacing-lg);
+}
+
+.footer-links a {
+    font-size: 0.8rem;
+    color: var(--wiki-blue);
+}
+
+.footer-logos {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.footer-logos img {
+    height: 31px;
+    width: auto;
+}

@@ -1,0 +1,221 @@
+/* ===========================================
+   Components Styles - 目次、インフォボックス、テーブル
+   =========================================== */
+
+/* 目次 (Table of Contents) */
+.toc {
+    display: inline-block;
+    background: var(--wiki-bg-light);
+    border: 1px solid var(--wiki-border);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    min-width: 300px;
+}
+
+.toc-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.toc-toggle {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--wiki-blue);
+    cursor: pointer;
+    margin-left: var(--spacing-sm);
+}
+
+.toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toc>ul>li {
+    margin: 0.3rem 0;
+}
+
+.toc ul ul {
+    padding-left: var(--spacing-lg);
+}
+
+.toc a {
+    color: var(--wiki-blue);
+}
+
+.toc-number {
+    margin-right: var(--spacing-sm);
+}
+
+/* インフォボックス */
+.infobox {
+    float: right;
+    clear: right;
+    margin: 0 0 var(--spacing-md) var(--spacing-lg);
+    width: 280px;
+    border: 1px solid var(--wiki-border);
+    background: var(--wiki-bg-infobox);
+    font-size: 0.9rem;
+}
+
+.infobox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox-header th {
+    background: #b0c4de;
+    padding: var(--spacing-sm);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.infobox td,
+.infobox th {
+    padding: 0.4rem 0.6rem;
+    border-top: 1px solid var(--wiki-border-light);
+    vertical-align: top;
+}
+
+.infobox th {
+    text-align: left;
+    font-weight: 400;
+    background: #e8e8e8;
+    width: 35%;
+}
+
+.infobox-image {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: var(--wiki-text-muted);
+    margin-top: var(--spacing-sm);
+}
+
+/* ウィキテーブル */
+.wikitable {
+    border-collapse: collapse;
+    background: #f8f9fa;
+    border: 1px solid var(--wiki-border);
+    margin: var(--spacing-md) 0;
+}
+
+.wikitable caption {
+    font-weight: 700;
+    padding: var(--spacing-sm);
+    text-align: left;
+}
+
+.wikitable th,
+.wikitable td {
+    border: 1px solid var(--wiki-border);
+    padding: var(--spacing-sm) 0.8rem;
+    text-align: left;
+}
+
+.wikitable th {
+    background: var(--wiki-bg-header);
+}
+
+.wikitable tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.wikitable tr:nth-child(odd) {
+    background: #fff;
+}
+
+/* 注意・警告ボックス */
+.notice-box {
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    border: 1px solid var(--wiki-border);
+    background: var(--wiki-bg-light);
+}
+
+.notice-box.warning {
+    border-color: #ffcc00;
+    background: #fff9e6;
+}
+
+.notice-box.info {
+    border-color: #69c;
+    background: #eef6ff;
+}
+
+/* 記事通知（廃止通知など） */
+.article-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--wiki-border);
+    background: var(--wiki-bg-light);
+    border-radius: 2px;
+}
+
+.article-notice.archived {
+    border-color: #d4a017;
+    background: #fff8dc;
+}
+
+.article-notice.warning {
+    border-color: #d33;
+    background: #fee7e6;
+}
+
+.article-notice.info {
+    border-color: #69c;
+    background: #eef6ff;
+}
+
+.notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.notice-content {
+    flex: 1;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* タイムライン（沿革） */
+dl.timeline {
+    margin: var(--spacing-md) 0;
+    padding: 0;
+}
+
+dl.timeline dt {
+    font-weight: 700;
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px dotted var(--wiki-border-light);
+}
+
+dl.timeline dd {
+    margin: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-lg);
+    padding-left: var(--spacing-md);
+    border-left: 2px solid var(--wiki-border-light);
+}
+
+/* 最終更新日時 */
+.last-modified {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--wiki-border-light);
+    font-size: 0.85rem;
+    color: var(--wiki-text-muted);
+    text-align: right;
+}

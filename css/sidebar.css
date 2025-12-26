@@ -1,0 +1,47 @@
+/* ===========================================
+   Sidebar Styles - サイドバー
+   =========================================== */
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    background: var(--wiki-sidebar-bg);
+    border-right: 1px solid var(--wiki-border-light);
+    padding: var(--spacing-md) 0;
+}
+
+.sidebar-section {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-top: 1px solid var(--wiki-border-light);
+}
+
+.sidebar-section:first-child {
+    border-top: none;
+}
+
+.sidebar-section h3 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--wiki-text-muted);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+}
+
+.sidebar-section ul {
+    list-style: none;
+}
+
+.sidebar-section li {
+    margin: var(--spacing-xs) 0;
+}
+
+.sidebar-section a {
+    font-size: 0.85rem;
+    color: var(--wiki-blue);
+    display: block;
+    padding: 0.15rem 0;
+}
+
+.sidebar-section a:hover {
+    text-decoration: underline;
+}

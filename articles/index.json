@@ -1,0 +1,65 @@
+{
+    "title": "ページ一覧",
+    "intro": "このサイトで閲覧できる記事の一覧です。下記のリンクから各記事にアクセスできます。",
+    "infobox": null,
+    "toc": [
+        {
+            "id": "section1",
+            "number": "1",
+            "title": "記事一覧"
+        },
+        {
+            "id": "section2",
+            "number": "2",
+            "title": "カテゴリ別"
+        },
+        {
+            "id": "section3",
+            "number": "3",
+            "title": "このサイトについて"
+        }
+    ],
+    "sections": [
+        {
+            "id": "section1",
+            "title": "記事一覧",
+            "content": "<p>現在、以下の記事が閲覧可能です：</p><div class=\"article-list-box\"><ul class=\"article-index-list\"><li><a href=\"?article=artificial_intelligence\"><b>人工知能</b></a> - 計算機科学の一分野。機械学習、深層学習などの技術について解説。</li><li><a href=\"?article=wikipedia\"><b>ワィキペディア</b></a> - 世界最大のオンライン百科事典について。</li><li><a href=\"?article=y_mode\"><b>Yモード</b></a> - 1999年から2026年まで日本で運用された未成年者向け閉鎖型インターネットサービス。</li></ul></div>"
+        },
+        {
+            "id": "section2",
+            "title": "カテゴリ別",
+            "content": "",
+            "columns": [
+                {
+                    "title": "テクノロジー",
+                    "items": [
+                        "<a href=\"?article=artificial_intelligence\">人工知能</a>"
+                    ]
+                },
+                {
+                    "title": "インターネット",
+                    "items": [
+                        "<a href=\"?article=wikipedia\">ワィキペディア</a>",
+                        "<a href=\"?article=y_mode\">Yモード</a>"
+                    ]
+                },
+                {
+                    "title": "その他",
+                    "items": [
+                        "（準備中）"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "section3",
+            "title": "このサイトについて",
+            "content": "<p>このサイトはワィキペディアのデザインを再現したクローンサイトです。記事はJSON形式で管理されており、新しいJSONファイルを追加することで記事を増やすことができます。</p><h3>記事の追加方法</h3><ol><li><code>articles/</code> フォルダに新しいJSONファイルを作成</li><li>既存の記事JSONを参考にしてフォーマットに従って記事を作成</li><li><code>?article=ファイル名</code> でアクセス</li></ol><h3>技術スタック</h3><ul><li><b>HTML5</b> - 構造</li><li><b>CSS3</b> - スタイリング（パーツ別に分割）</li><li><b>JavaScript</b> - 動的コンテンツ読み込み</li><li><b>JSON</b> - 記事データ管理</li></ul>"
+        }
+    ],
+    "categories": [
+        "メインページ",
+        "ヘルプ",
+        "記事一覧"
+    ]
+}

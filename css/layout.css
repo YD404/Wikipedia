@@ -1,0 +1,17 @@
+/* ===========================================
+   Layout Styles - レイアウト構造
+   =========================================== */
+
+/* メインコンテナ */
+.wiki-container {
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* メインコンテンツ */
+.content {
+    flex: 1;
+    min-width: 0;
+    padding: 0 var(--spacing-lg) var(--spacing-xl);
+}
